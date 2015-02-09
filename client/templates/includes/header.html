@@ -8,7 +8,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{pathFor 'home'}}">Microscope</a>
+        <a class="navbar-brand" href="{{pathFor 'home'}}">Hana</a>
       </div>
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
@@ -21,6 +21,9 @@
           {{#if currentUser}}
             <li class="{{activeRouteClass 'postSubmit'}}">
               <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
+            </li>
+            <li class="{{activeRouteClass 'userPage'}}">
+              <a href="{{pathFor 'userPage'}}">User Page</a>
             </li>
             <li class="dropdown">
               {{> notifications}}
