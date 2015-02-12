@@ -12,26 +12,23 @@
       </div>
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
-          <li class="{{activeRouteClass 'home' 'newPosts'}}">
-            <a href="{{pathFor 'newPosts'}}">New</a>
-          </li>
-          <li class="{{activeRouteClass  'bestPosts'}}">
+<!--           <li class="{{activeRouteClass  'bestPosts'}}">
             <a href="{{pathFor 'bestPosts'}}">Best</a>
-          </li>
-          <li class="{{activeRouteClass  'aboutPage'}}">
-            <a href="{{pathFor 'aboutPage'}}">About</a>
-          </li>
+          </li> -->
           {{#if currentUser}}
+          <li class="{{activeRouteClass 'home' 'newPosts'}}">
+            <a href="{{pathFor 'newPosts'}}">Your Wellness Report</a>
+          </li>
             <li class="{{activeRouteClass 'postSubmit'}}">
-              <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
-            </li>
-            <li class="{{activeRouteClass 'userPage'}}">
-              <a href="{{pathFor 'userPage'}}">User Page</a>
+              <a href="{{pathFor 'postSubmit'}}">Submit Your Challenge</a>
             </li>
             <li class="dropdown">
               {{> notifications}}
             </li>
           {{/if}}
+          <li class="{{activeRouteClass  'aboutPage'}}">
+            <a href="{{pathFor 'aboutPage'}}">About Hana</a>
+          </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           {{> loginButtons}}

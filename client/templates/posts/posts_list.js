@@ -4,5 +4,10 @@ Template.postsList.helpers({
       post._rank = index;
       return post;
     });
+  },
+
+  postsUpvoted: function(){
+  	return 
   }
+
 });

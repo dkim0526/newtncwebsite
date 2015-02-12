@@ -29,18 +29,13 @@ body {
   height: 300px; }
 
 .post {
-  background-color:red;
+  background-color:white;
+
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   position: relative;
   opacity: 1; }
-  iframe{
-    display:inline-block;
-  }
-  .iframe-container{
-    text-align: center;
-  }
   .post:before, .post:after {
     content: "";
     display: table; }
@@ -65,20 +60,22 @@ body {
     float: left; }
   .post .post-content {
     float: left; }
-    .post .post-content h3 {
+    .post .post-content h2 {
       margin: 0;
       line-height: 1.4;
-      font-size: 18px; }
-      .post .post-content h3 a {
-        display: inline-block;
-        margin-right: 5px; }
+      font-size: 18px;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 20px; }
       .post .post-content h3 span {
         font-weight: normal;
         font-size: 14px;
         display: inline-block;
         color: #aaaaaa; }
     .post .post-content p {
+      display: inline-block;
       margin: 0; }
+
   .post .discuss {
     display: block;
     float: right;
@@ -173,4 +170,9 @@ body {
 #aboutPage
 {
   background-color: #CEE3F6; 
+}
+
+.wellnessIndex{
+  text-align:center;
+  background:white;
 }

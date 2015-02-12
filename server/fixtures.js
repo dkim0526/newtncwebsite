@@ -16,7 +16,7 @@ if (Posts.find().count() === 0) {
     title: 'Introducing Telescope',
     userId: sacha._id,
     author: sacha.profile.name,
-    url: 'http://sachagreif.com/introducing-telescope/',
+    url: 'img/1.jpeg',
     submitted: new Date(now - 7 * 3600 * 1000),
     commentsCount: 2,
     upvoters: [], votes: 0

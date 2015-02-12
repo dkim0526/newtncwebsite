@@ -1,18 +1,20 @@
 <template name="postItem">
   <div class="post" {{attributes}}>
-    <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
-    <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
-      <p>
-        {{pluralize votes "Vote"}},
-        submitted by {{author}},
-        <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
-        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
-      </p>
-      <div class="iframe-container">
-        <img class="img-responsive" width="560" height="315" src="img/1.jpeg" alt="">
+    <!-- <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a> -->
+    <div class="post-content" style="width: 100%; overflow:auto;">
+     
+      <div class="iframe-container" style="float:left; width: 60%;">
+        <img class="img-responsive" width="560" height="315" src="{{url}}" alt="">
       </div>
+      
+      <div class="post-description" style="float:right; width: 40%;">
+        <h2>{{title}}</h2>
+        <p> {{submitted}} {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+      </p>
+      </div>
+
+
     </div>
-    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
+    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">View Post</a>
   </div>
 </template>
