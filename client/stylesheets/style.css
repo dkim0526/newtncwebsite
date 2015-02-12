@@ -29,11 +29,18 @@ body {
   height: 300px; }
 
 .post {
+  background-color:red;
   /* For modern browsers */
   /* For IE 6/7 (trigger hasLayout) */
   *zoom: 1;
   position: relative;
   opacity: 1; }
+  iframe{
+    display:inline-block;
+  }
+  .iframe-container{
+    text-align: center;
+  }
   .post:before, .post:after {
     content: "";
     display: table; }
@@ -161,4 +168,9 @@ body {
   clear: both;
   margin-bottom: 5px;
   pointer-events: auto;
+}
+
+#aboutPage
+{
+  background-color: #CEE3F6; 
 }
