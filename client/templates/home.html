@@ -262,6 +262,7 @@
                                 <li><mark>Category</mark>: Health Food Eating habit</li>
                             </ul>
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            <button type="button" class="btn btn-primary" onclick="addPost('img/11.jpg','Spring recipe')"><i class="fa fa-times"></i> Complete this challenge! </button>
                         </div>
                     </div>
                 </div>
@@ -294,6 +295,7 @@
                             </ul>
 
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            <button type="button" class="btn btn-primary" onclick="addPost('img/watch_sunset.jpeg','Enjoying the Sunrise Together')"><i class="fa fa-times"></i> Complete this challenge! </button>
                         </div>
                     </div>
                 </div>
@@ -327,6 +329,7 @@
                                 <li><mark>Category</mark>: School Organized Workplace</li>
                             </ul>
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            <button type="button" class="btn btn-primary" onclick="addPost('img/1.jpeg','Organize and Prepare for Midtems')"><i class="fa fa-times"></i> Complete this challenge! </button>
                         </div>
                     </div>
                 </div>
@@ -359,6 +362,7 @@
                                 <li><mark>Category</mark>: Health Meditation Relax</li>
                                 </ul>
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            <button type="button" class="btn btn-primary" onclick="addPost('img/mindfulness.jpeg','Pause and Rest for One minute')"><i class="fa fa-times"></i> Complete this challenge! </button>
                         </div>
                     </div>
                 </div>
@@ -392,6 +396,7 @@
                             </ul>
 
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            <button type="button" class="btn btn-primary" onclick="addPost('img/meetingfriends.jpg', 'Coffee' ) "><i class="fa fa-times"></i> Complete this challenge! </button>
                         </div>
                     </div>
                 </div>
@@ -425,6 +430,7 @@
                             </ul>
 
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            <button type="button" class="btn btn-primary" onclick="addPost('img/stepbystep.jpg','Dream Big, Do Small')"><i class="fa fa-times"></i> Complete this challenge! </button>
                         </div>
                     </div>
                 </div>
@@ -446,6 +452,27 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/agency.js"></script>
 
+    <script>
+    function addPost(urlParam,titleParam )
+    {
+        var post = {
+          url: urlParam, 
+          title: titleParam
+        };
+        
+        Meteor.call('postInsert', post, function(error, result) {
+          // display the error to the user and abort
+          if (error)
+            return throwError(error.reason);
+        Router.go('/new', {name: 'newPosts'});  
+          // Router.go('/new');
+        });
+    }
+    </script>
+
 </body>
+
+  <!-- {{addPost}} -->
+
 
 </template>
