@@ -396,7 +396,7 @@
                             </ul>
 
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
-                            <button type="button" class="btn btn-primary" onclick="addPost('img/meetingfriends.jpg', 'Coffee' ) "><i class="fa fa-times"></i> Complete this challenge! </button>
+                            <button type="button" class="btn btn-primary" onclick="addPost('img/meetingfriends.jpg', 'Coffee','i love coffee' ) "><i class="fa fa-times"></i> Complete this challenge! </button>
                         </div>
                     </div>
                 </div>
@@ -453,11 +453,13 @@
     <script src="js/agency.js"></script>
 
     <script>
-    function addPost(urlParam,titleParam )
+    function addPost(urlParam,titleParam,descriptionParam )
     {
         var post = {
           url: urlParam, 
-          title: titleParam
+          title: titleParam,
+          description: descriptionParam,
+          userId : this.userId
         };
         
         Meteor.call('postInsert', post, function(error, result) {

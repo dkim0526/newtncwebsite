@@ -1,5 +1,7 @@
 Template.home.helpers({ 
 
+  //MOVED SCRIPT TO BOTTOM OF HOME.HTML (PATH ISSUES)
+
   // addPost: function()
   // {
   //   var post = {
