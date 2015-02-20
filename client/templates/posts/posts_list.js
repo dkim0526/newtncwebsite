@@ -30,6 +30,10 @@ Template.postsList.helpers({
   			break;
   	}
 
+  },
+
+  numPosts: function(){
+    return Posts.find().count();
   }
 
 });
