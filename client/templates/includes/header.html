@@ -8,7 +8,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{pathFor 'home'}}">Hana</a>
+        <a class="navbar-brand" href="{{pathFor 'home'}}">T&C</a>
       </div>
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav">
@@ -17,20 +17,20 @@
           </li> -->
           {{#if currentUser}}
           <li class="{{activeRouteClass 'newPosts'}}">
-            <a href="{{pathFor 'newPosts'}}">Your Challenge Report</a>
+            <a href="{{pathFor 'newPosts'}}">Your JAMS Report</a>
           </li>
             <li class="{{activeRouteClass 'postSubmit'}}">
-              <a href="{{pathFor 'postSubmit'}}">Submit A Challenge</a>
+              <a href="{{pathFor 'postSubmit'}}">Submit A JAM</a>
             </li>
             <li class="{{activeRouteClass 'addChallenge'}}">
-              <a href="{{pathFor 'addChallenge'}}">Add A Challenge</a>
+              <a href="{{pathFor 'addChallenge'}}">Add A JAM</a>
             </li>
             <li class="dropdown">
               {{> notifications}}
             </li>
           {{/if}}
           <li class="{{activeRouteClass  'aboutPage'}}">
-            <a href="{{pathFor 'aboutPage'}}">About Hana</a>
+            <a href="{{pathFor 'aboutPage'}}">About Town and Country</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
